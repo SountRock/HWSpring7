@@ -1,4 +1,4 @@
-package org.example.controller;
+package org.example.resourceserver.controller;
 
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -15,7 +15,7 @@ import java.io.InputStream;
 public class ResourceController {
     @GetMapping("/cat")
     public ResponseEntity<byte[]> getImageCat() throws IOException {
-        InputStream in = new FileInputStream("cat.jpg"); //считать файл cat.jpg
+        InputStream in = new FileInputStream("resource-server/cat.jpg"); //считать файл cat.jpg
 
         byte[] image = in.readAllBytes(); //переводим в массив байтов
 

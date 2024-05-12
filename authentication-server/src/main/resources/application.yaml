@@ -1,5 +1,5 @@
 server:
-  port: 9090
+  port: 8090
 spring:
   output.ansi.enabled: ALWAYS
   security:
@@ -12,9 +12,10 @@ spring:
               client-id: client
               client-secret: "secret"
               authorization-grant-types: client_credentials,authorization_code,refresh_token
-              redirect-uris: http://localhost:8080/login/oauth2/code/reg-client
+              redirect-uris: http://127.0.0.1:8080/login/oauth2/code/reg-client
               scopes: user.read,user.write,openid
               client-authentication-methods: client_secret_basic
+
 logging:
   level:
     org:
