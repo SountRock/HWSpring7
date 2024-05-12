@@ -1,4 +1,4 @@
-package org.example.resourceserver.controller;
+package org.example.authenticationserver.controller;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -27,7 +27,7 @@ public class SecurityConfiguration {
         //Указываем детали парамеров пользователей
         UserDetails user = userBuilder
                 .username("user") //имя user
-                .password("111") //пароль
+                .password("password") //пароль
                 .roles("USER", "ADMIN") //роли
                 .build();
 
